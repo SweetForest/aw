@@ -1,1 +1,32 @@
-test
+<script>
+
+(async function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const rank = params.get("rank");
+
+  if (!rank) return;
+
+  const WORKER_URL = "https://aw-hook.sweetforestttt.workers.dev";
+
+  try {
+
+    await fetch(WORKER_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        rank: rank,
+        time: Date.now()
+      })
+    });
+
+    window.location.replace("success.html");
+
+  } catch (err) {
+    console.error(err);
+  }
+
+})();
+</script>
