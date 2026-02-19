@@ -1,20 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Success</title>
-
-  <script>
-    history.pushState(null, null, location.href);
-    window.onpopstate = function () {
-      history.go(1);
-    };
-  </script>
-
+<meta charset="UTF-8">
+<title>Submitted</title>
+<style>
+body{
+  background:#0a0a0f;
+  color:#e8e8f4;
+  font-family:sans-serif;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  text-align:center;
+}
+.box{
+  background:#16161f;
+  padding:40px;
+  border-radius:16px;
+  border:1px solid #22222e;
+}
+</style>
 </head>
 <body>
 
-done
+<div class="box">
+  <h2>✅ Submission Successful</h2>
+  <p>Data has been submitted.</p>
+  <p style="opacity:.6;font-size:14px">
+    Data may take some time to update and may not appear immediately.
+  </p>
+</div>
 
 </body>
 </html>
