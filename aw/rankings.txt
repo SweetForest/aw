@@ -1,32 +1,5 @@
 [
   {
-    "playerName": "もくつき",
-    "antValue": 116.6,
-    "antTier": 3,
-    "lvValue": 67,
-    "lvTier": 0,
-    "genValue": 0,
-    "genTier": 0
-  },
-  {
-    "playerName": "OpalStars",
-    "antValue": 75.0954693730619,
-    "antTier": 2,
-    "lvValue": 43,
-    "lvTier": 0,
-    "genValue": 0,
-    "genTier": 0
-  },
-  {
-    "playerName": "Maxluvvv",
-    "antValue": 9.97449547089813,
-    "antTier": 3,
-    "lvValue": 54,
-    "lvTier": 0,
-    "genValue": 0,
-    "genTier": 0
-  },
-  {
     "playerName": "Sweet Forest",
     "antValue": 1.73272787081043,
     "antTier": 3,
