@@ -1,10 +1,19 @@
 <script>
 (function () {
-
   const params = new URLSearchParams(window.location.search);
-  const rank = params.get("r");
+  let rank = params.get("r");
 
-  if (!rank) return;
+  if (!rank) {
+    window.location.replace("error");
+    return;
+  }
+
+  rank = rank.replace(/[^A-Za-z0-9\-_]/g, "");
+
+  if (rank.length === 0) {
+    window.location.replace("error");
+    return;
+  }
 
   fetch("https://aw-hook.sweetforestttt.workers.dev/", {
     method: "POST",
@@ -15,16 +24,15 @@
       rank: rank
     })
   })
-  .then(() => {
-
-    window.location.replace("success");
-
+  .then((response) => {
+    if (response.ok) {
+      window.location.replace("success");
+    } else {
+      window.location.replace("error");
+    }
   })
   .catch(() => {
-
     window.location.replace("error");
-
   });
-
 })();
 </script>
